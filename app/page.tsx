@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GraduationCap, Users, Calendar } from "lucide-react"
+import { GraduationCap, Users, Smartphone } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -50,17 +50,16 @@ export default function HomePage() {
           <Card className="hover:shadow-lg transition-shadow">
             <CardHeader>
               <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4">
-                <Calendar className="w-6 h-6 text-accent" />
+                <Smartphone className="w-6 h-6 text-accent" />
               </div>
-              <CardTitle>Student Portal</CardTitle>
-              <CardDescription>View your attendance records and track your progress</CardDescription>
+              <CardTitle>Student Mobile App</CardTitle>
+              <CardDescription>Students can view their attendance records via the mobile app</CardDescription>
             </CardHeader>
             <CardContent>
-              <Link href="/student/login">
-                <Button className="w-full bg-transparent" size="lg" variant="outline">
-                  Student Login
-                </Button>
-              </Link>
+              <Button className="w-full bg-transparent" size="lg" variant="outline" disabled>
+                Download Mobile App
+              </Button>
+              <p className="text-xs text-muted-foreground mt-2 text-center">Available on iOS and Android</p>
             </CardContent>
           </Card>
         </div>
@@ -69,20 +68,13 @@ export default function HomePage() {
           <Card>
             <CardHeader>
               <CardTitle>Demo Credentials</CardTitle>
-              <CardDescription>Use these credentials to test the system</CardDescription>
+              <CardDescription>Use these credentials to test the admin portal</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="p-4 bg-muted rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">Admin Account</h3>
-                  <p className="text-sm text-muted-foreground">Email: admin@school.edu</p>
-                  <p className="text-sm text-muted-foreground">Password: admin123</p>
-                </div>
-                <div className="p-4 bg-muted rounded-lg">
-                  <h3 className="font-semibold text-foreground mb-2">Student Account</h3>
-                  <p className="text-sm text-muted-foreground">Student ID: 2024001</p>
-                  <p className="text-sm text-muted-foreground">Password: student123</p>
-                </div>
+            <CardContent>
+              <div className="p-4 bg-muted rounded-lg max-w-sm mx-auto">
+                <h3 className="font-semibold text-foreground mb-2">Admin Account</h3>
+                <p className="text-sm text-muted-foreground">Email: admin@school.edu</p>
+                <p className="text-sm text-muted-foreground">Password: admin123</p>
               </div>
             </CardContent>
           </Card>
